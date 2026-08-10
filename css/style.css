@@ -90,6 +90,18 @@ body {
 
     border-bottom: 1px solid rgba(0,200,255,.08);
 
+    transition:.35s;
+
+}
+
+.hero-info:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--bs-primary);
+
+    box-shadow:0 0 25px rgba(0,200,255,.18);
+
 }
 
 .hero-info .hero-description{
@@ -136,6 +148,68 @@ body {
 
 .hero .btn-primary:hover{
     box-shadow:0 0 35px rgba(0,200,255,.55);
+}
+
+.process-section {
+    padding: 100px 0;
+}
+
+/* Card */
+
+.process-card {
+    text-align: center;
+    padding: 20px 25px;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+/* Número */
+
+.process-number {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--bs-primary);
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
+}
+
+/* Título */
+
+.process-card h3 {
+    color: #ffffff;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+/* Texto */
+
+.process-card p {
+    color: #c7d3e0;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    margin: 0 auto;
+
+    max-width: 330px;
+}
+
+/* Hover */
+
+.process-card:hover {
+    transform: translateY(-8px);
+}
+
+.process-card:hover .process-number {
+    text-shadow: 0 0 30px rgba(0, 200, 255, 0.55);
 }
 
 .services{
@@ -218,6 +292,24 @@ body {
 
     color:#c7d3e0;
 
+}
+
+.btn-consultoria {
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+.btn-consultoria:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.45);
+}
+
+.hero-description strong {
+    color: var(--bs-primary);
+    font-weight: 700;
 }
 
 /* ===== SOBRE ===== */
