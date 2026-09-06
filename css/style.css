@@ -346,69 +346,81 @@ h1, h2, h3, h4, h5,
 }
 
 /* =========================================
-   BOTÃO SANDUÍCHE NO CELULAR (CSS PURO)
+   NAVBAR MODERNA (GLASSMORPHISM)
    ========================================= */
 
+.navbar,
+.navbar.bg-body-tertiary,
+.navbar.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    /* Fundo escuro semi-transparente que revela o conteúdo passando por trás */
+    background: rgba(3, 8, 21, 0.75) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 14px 0 !important;
+    transition: all 0.3s ease;
+}
+
+/* Links do menu com tipografia mais refinada */
+.nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 16px !important;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(0, 200, 255, 0.5);
+}
+
+/* BOTÃO SANDUÍCHE SUAVE (Minimalista) */
 .navbar-toggler {
-    border: 2px solid #00c8ff !important;
-    background-color: #0b1a3a !important; /* Azul escuro vivo contrastante */
-    padding: 8px 10px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 5px !important;
-    box-shadow: 0 0 12px rgba(0, 200, 255, 0.4) !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 8px !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-/* Esconde o SVG padrão que o Bootstrap apaga */
+/* Traços finos e elegantes brancos */
 .navbar-toggler-icon {
-    background-image: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     width: 24px !important;
-    height: 18px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
+    height: 24px !important;
+    border: none !important;
 }
 
-/* Cria os 3 risquinhos 100% BRANCOS físicos */
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
-    content: '' !important;
-    display: block !important;
-    width: 100% !important;
-    height: 3px !important;
-    background-color: #ffffff !important;
-    border-radius: 2px !important;
-    box-shadow: 0 0 4px #00c8ff !important;
+    display: none !important;
 }
 
-/* O traço do meio */
-.navbar-toggler-icon {
-    border-top: 3px solid #ffffff !important;
-    border-bottom: 0 !important;
-}
-
-/* Menu sanfona aberto no celular */
+/* Menu sanfona aberto no celular (efeito cartão de vidro) */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: #081124 !important;
-        border: 1px solid rgba(0, 200, 255, 0.3) !important;
-        border-radius: 10px !important;
-        padding: 15px !important;
-        margin-top: 12px !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7) !important;
+        background: rgba(8, 17, 36, 0.92) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 16px;
+        margin-top: 14px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     }
 
     .navbar-nav .nav-link {
-        color: #ffffff !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-        padding: 12px 10px !important;
-        font-weight: 500 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 12px 14px !important;
     }
 
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-        color: #00c8ff !important;
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
     }
 }
