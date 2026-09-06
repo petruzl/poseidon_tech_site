@@ -514,3 +514,10 @@ h1, h2, h3, h4, h5,
         padding: 10px 0;
     }
 }
+
+/* Garante que o menu fixo fique sempre acima de qualquer elemento */
+.navbar.sticky-top {
+    z-index: 1030;
+    backdrop-filter: blur(10px); /* Efeito moderno translúcido ao rolar */
+    background-color: rgba(11, 19, 43, 0.95) !important;
+}
