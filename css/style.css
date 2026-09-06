@@ -344,9 +344,8 @@ h1, h2, h3, h4, h5,
     background-color: #1c2541 !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-
-/* Navbar fixa e animada */
-.navbar, 
+/* Barra de Navegação Fixa com Cor Firme */
+.navbar,
 .navbar.bg-body-tertiary {
     background-color: #0b132b !important;
 }
@@ -354,13 +353,13 @@ h1, h2, h3, h4, h5,
 .navbar.sticky-top {
     position: sticky;
     top: 0;
-    z-index: 1030;
-    backdrop-filter: blur(10px);
-    background-color: rgba(11, 19, 43, 0.95) !important;
+    z-index: 1050;
+    background-color: #0b132b !important;
+    border-bottom: 1px solid rgba(0, 200, 255, 0.15);
     transition: transform 0.35s ease-in-out;
 }
 
-/* Classe aplicada via JavaScript para esconder ao rolar para baixo */
+/* Esconde ao rolar para baixo */
 .navbar-hidden {
     transform: translateY(-100%);
 }
@@ -376,7 +375,8 @@ h1, h2, h3, h4, h5,
 
 /* Botão sanduíche visível no celular */
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .navbar-toggler:focus {
@@ -387,13 +387,14 @@ h1, h2, h3, h4, h5,
     filter: invert(1) grayscale(100%) brightness(200%) !important;
 }
 
-/* Menu no celular */
+/* Fundo do menu aberto no celular */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: #0b132b;
+        background-color: #0b132b !important;
         padding: 15px;
         border-radius: 8px;
         margin-top: 10px;
+        border: 1px solid rgba(0, 200, 255, 0.15);
     }
     
     .navbar-nav .nav-link {
