@@ -346,58 +346,69 @@ h1, h2, h3, h4, h5,
 }
 
 /* =========================================
-   BARRA DE NAVEGAÇÃO E MENU MOBILE
+   BOTÃO SANDUÍCHE NO CELULAR (CSS PURO)
    ========================================= */
 
-/* Fundo sempre sólido e fixo no topo */
-.navbar,
-.navbar.bg-body-tertiary,
-.navbar.sticky-top {
-    background-color: #081124 !important;
-    border-bottom: 1px solid rgba(0, 200, 255, 0.2) !important;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-}
-
-/* Links do menu no computador */
-.nav-link {
-    color: #e0e6ed !important;
-    font-size: 1rem;
-    padding: 8px 16px !important;
-}
-
-.nav-link.active,
-.nav-link:hover {
-    color: #00c8ff !important;
-}
-
-/* BOTÃO SANDUÍCHE NO CELULAR */
 .navbar-toggler {
-    border: 2px solid #00c8ff !important;        /* Borda ciano viva */
-    background-color: rgba(0, 200, 255, 0.1) !important; /* Leve fundo azul */
-    padding: 6px 10px !important;
+    border: 2px solid #00c8ff !important;
+    background-color: #0b1a3a !important; /* Azul escuro vivo contrastante */
+    padding: 8px 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.4) !important;
 }
 
-/* Os 3 risquinhos em BRANCO nítido */
+/* Esconde o SVG padrão que o Bootstrap apaga */
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: none !important;
+    width: 24px !important;
+    height: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
-/* Estilo do menu quando aberto no celular */
+/* Cria os 3 risquinhos 100% BRANCOS físicos */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '' !important;
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    box-shadow: 0 0 4px #00c8ff !important;
+}
+
+/* O traço do meio */
+.navbar-toggler-icon {
+    border-top: 3px solid #ffffff !important;
+    border-bottom: 0 !important;
+}
+
+/* Menu sanfona aberto no celular */
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background-color: #081124 !important;
-        border: 1px solid rgba(0, 200, 255, 0.25);
-        border-radius: 10px;
-        padding: 15px;
-        margin-top: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(0, 200, 255, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 15px !important;
+        margin-top: 12px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7) !important;
     }
 
     .navbar-nav .nav-link {
         color: #ffffff !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
         padding: 12px 10px !important;
+        font-weight: 500 !important;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #00c8ff !important;
     }
 }
